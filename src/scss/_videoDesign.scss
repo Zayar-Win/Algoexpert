@@ -1,0 +1,105 @@
+.video__setup{
+    padding:150px 20px 80px 20px;
+    position: relative;
+    color:black;
+
+    .uparrow{
+        position:absolute;
+        top:8px;
+        right:90px;
+        width:30px;
+    }
+
+    .video__container{
+        display: flex;
+        margin:0 auto;
+        max-width:1200px;
+
+        .container__left{
+            flex: 1 1 50%;
+            margin-right:30px;
+
+            h2{
+                font-family: "Ubuntu",sans-serif;
+                font-size:36px;
+                font-weight: 400;
+                margin-bottom:20px;
+            }
+
+            p{
+                font-size:16px;
+                font-weight: normal;
+                color:#445d6e;
+                font-family: 'Open Sans',sans-serif;
+                line-height: 1.7;
+                margin-bottom:15px;
+            }
+
+            .content__container{
+                display: flex;
+                margin-top:40px;
+
+                .left,.right{
+                    flex: 1 1 50%;
+
+                    .header{
+                        display: flex;
+                        align-items: center;
+                        margin-bottom:10px;
+
+                        svg{
+                            width:50px;
+                            margin-right:15px;
+                        }
+
+                        h5{
+                            font-size:20px;
+                            font-weight: 400;
+                            font-family: 'Ubuntu',sans-serif;
+                        }
+                    }
+
+                    p{
+                        span{
+                            color:#3746DB;
+                            display: inline-block;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .left{
+                    margin-right:10px;
+                }
+                .right{
+                    margin-left:10px;
+                }
+            }
+        }
+
+        .container__right{
+            flex: 1 1 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .iframe__container{
+                position:relative;
+                height:0;
+                padding-top:56.25%;
+                width:100%;
+
+                .video{
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    width:100%;
+                    height:100%;
+                    border-radius: 4px;
+                }
+            }
+
+            
+        }
+    }
+}

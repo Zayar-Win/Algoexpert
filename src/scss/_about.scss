@@ -1,0 +1,142 @@
+.about{
+    padding-top:150px;
+    padding-left:20px;
+    padding-right:20px;
+
+    h1{
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 400;
+        font-size:36px;
+        margin-bottom:20px;
+    }
+    .btn{
+        text-align: center;
+        margin-bottom:50px;
+        
+        
+        button{
+            position:relative;
+            display: flex;
+            margin:0 auto;
+            width:190px;
+            align-items: center;
+            justify-content: center;
+            padding:5px 0px;
+            background-color: transparent;
+            border:2px solid #02203C;
+            border-radius: 4px;
+            color:#02203c;
+            transition: background .2s, color .2s;
+
+            &:hover{
+                .effect{
+                    width:100%;
+                }
+            }
+            
+            .effect{
+                position:absolute;
+                left:0;
+                height:100%;
+                background-color: #02203c;
+                width:0;
+                overflow: hidden;
+                transition: width .4s cubic-bezier(.34,.63,.29,.96);
+                z-index:0;
+                div{
+                    display: flex;
+                    margin:0 auto;
+                    width:190px;
+                    align-items: center;
+                    justify-content: center;
+                    padding:5px 0px;
+                    background-color: transparent;
+                    border-radius: 4px;
+
+                    svg{
+                        width:30px;
+                        margin-right:10px;
+                        color:white;
+                    }
+                    span{
+                        font-size:15px;
+                        color:#fff;
+                        letter-spacing: 0.2px;
+                        font-family: 'Open Sans', sans-serif;
+                    }
+                    
+                }
+                
+            }
+
+            
+
+
+            svg{
+                width:30px;
+                margin-right:10px;
+            }
+            span{
+                font-size:15px;
+                color:#02203c;
+                letter-spacing: 0.2px;
+                font-family: 'Open Sans', sans-serif;
+            }
+        }
+    }
+
+    .cards{
+        display: flex;
+        gap:25px;
+        max-width: 1200px;
+        margin:0 auto;
+        flex-wrap: wrap;
+
+        .card{
+            flex:1 1 30%;
+            display: flex;
+            flex-direction: column;
+            max-width:400px;
+            padding:20px;
+            text-align: center;
+            align-items: center;
+            transition: box-shadow .3s ease;
+            cursor:pointer;
+            border-radius: 4px;
+
+            svg{
+                width:50px;
+                margin-bottom:15px;
+                color:#626EE3;
+                transition:transform .2s linear;
+            }
+
+            h3{
+                font-size:20px;
+                font-weight: 400;
+                font-family: 'Ubuntu', sans-serif;
+                margin-bottom: 15px;
+            }
+            p{
+                font-size:14px;
+                color:#445d6e;
+                line-height: 1.7;
+
+                span{
+                    display: block;
+                    color:#626EE3;
+                }
+            }
+
+
+            &:hover{
+                box-shadow: 0 0 35px -2px rgb(0 0 0 / 20%);
+                svg{
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+}

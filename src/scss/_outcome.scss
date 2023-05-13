@@ -1,0 +1,136 @@
+.outcome{
+    padding:150px 20px 0px 20px; 
+
+    .outcome__container{
+        max-width: 1200px;
+        margin:0 auto;
+        background-color: white;
+        border-radius: 5px;
+        padding: 50px;
+        box-shadow: 0 0 60px 0 rgb(0 0 0 / 10%);
+
+        h1,p{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1{
+            padding-top:20px;
+            font-family: "Ubuntu",sans-serif;
+            font-size:36px;
+            font-weight: 400;
+        }
+        p{
+            font-size:18px;
+            color:#4A6273;
+            margin-bottom: 40px;
+        }
+
+        .slide__container{
+            height:230px;
+            overflow: hidden;
+            position: relative;
+
+            .left__bar,.right__bar{
+                position:absolute;
+                width:40px;
+                height:100%;
+                z-index:1;
+            }
+
+            .left__bar{
+                background: linear-gradient(90deg,#fff 30%,hsla(0,0%,100%,0));
+                left:0;
+                top:0;
+            }
+
+            .right__bar{
+                right:0;
+                top:0;
+                background: linear-gradient(-90deg,#fff 30%,hsla(0,0%,100%,0));
+
+            }
+
+            .top__slide,.bottom__slide{
+                display:flex;
+                align-items: center;
+                width:1400px;
+                position:relative;
+                height:100px;
+                margin-bottom:20px;
+
+                .first,.last{
+                    display: flex;
+                    width:100%;
+                    height:100%;
+                    position: absolute;
+                    animation:slide__first 30s infinite linear;
+
+                    div{
+                        flex:1 1 200px;
+                        margin:20px;
+
+                        img{
+                            width:100%;
+                            object-fit: contain;
+                            filter:grayscale(100%) brightness(0);
+                            opacity: 0.2;
+                            pointer-events: none;
+                        }
+                    }
+
+                }
+                .last{
+                    position: absolute;
+                    animation:slide__last 30s infinite linear;
+                    left:100%;
+                }
+            }
+            .bottom__slide{
+                .first{
+                    left:-100%;
+                    animation:bottom__slide__first 30s infinite linear;
+                }
+                .last{
+                    left:0;
+                    animation:bottom__slide__last 30s  infinite linear;
+                }
+            }
+        }
+
+        @keyframes slide__first {
+            0%{
+                left:0;
+            }
+            to{
+                left:-100%;
+            }
+        }
+
+        @keyframes slide__last {
+            0%{
+                left:100%;
+            }
+            to{
+                left:0;
+            }
+        }
+
+        @keyframes bottom__slide__first {
+            0%{
+                left:-100%;
+            }
+            to{
+                left:0;
+            }
+        }
+        @keyframes bottom__slide__last {
+            0%{
+                left:0;
+
+            }
+            to{
+                left:100%;
+            }
+        }
+    }
+}
